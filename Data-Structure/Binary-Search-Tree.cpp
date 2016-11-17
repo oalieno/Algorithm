@@ -21,6 +21,22 @@ void Insert(int key,Node* now = root){
     }
 }
 
+void Delete(int key,Node* now = root){
+    if(!root)return;
+    Node *prev;
+    while(now){
+        if(key == now->key){
+            if(now->left && now->right){}
+            else if(now->left){ prev-> }
+            else 
+            break;
+        }
+        prev = now;
+        if(key > now->key)now = now->right;
+        else if(key < now->key)now = now->left;
+    }
+}
+
 void Preorder(Node* now = root){
     if(!now) return;
     cout << now->key << " ";
