@@ -16,7 +16,7 @@ void Build(int N){
 // Single modify
 void Modify(int x,int d){
     T[x+=M] = d;
-    for(x>>1;x;x>>=1) T[x] = T[x<<1]+T[x<<1|1];
+    for(x>>=1;x;x>>=1) T[x] = T[x<<1]+T[x<<1|1];
 }
 // Range query
 int Query(int L,int R){
