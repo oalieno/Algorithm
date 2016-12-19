@@ -6,6 +6,7 @@ int M,A[NUM],T[NUM*4];
 //  2   3
 // 4 5 6 7
 // x 1 2 x
+
 // one-based
 void Build(int N){
     while(M=1;M<N+2;M<<=1);

@@ -1,4 +1,5 @@
 // Complexity : O(T+P)
+
 void predo(string pattern,int dp[]){
     dp[0] = 0;
     for(int i=1;i<pattern.size();i++){
