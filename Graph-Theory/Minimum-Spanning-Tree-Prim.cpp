@@ -1,4 +1,4 @@
-// Time Complexity : O(V^2)
+// Time Complexity : O(|V|^2)
 void MinimumSpanningTreePrim(int V,vector<pair<int,int>> E[]){
     bool visit[V+1];for(int i=0;i<V+1;i++) visit[i] = false;
     priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> PQ;

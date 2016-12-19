@@ -1,4 +1,4 @@
-// Time Complexity : O(ElogE)
+// Time Complexity : O(|E|log|E|)
 struct Edge{ int x,y,weight; };
 bool operator<(const Edge& A,const Edge& B){ return A.weight < B.weight; }
 
