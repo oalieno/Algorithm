@@ -1,20 +1,23 @@
-void MaxHeapify(int A[],int start,int end){
-    int parent = start,son = parent*2+1;
-    while(son <= parent){
-        if(son+1 <= end && A[son] < A[son+1])son++;
-        if(A[parent] > A[son])return;
-        else{
-            swap(A[parent],A[son]);
-            parent = son;
-            son = parent*2+1;
+// Complexity : O(logN)
+// one-based
+
+void MaxHeapify(int A[],int now,int L){
+    while(now <= L/2){
+        int left = now*2,right = now*2+1,largest = now;
+        if(left <= L && A[left] > A[largest]) largest = left;
+        if(right <= L && A[right] > A[largest]) largest = right;
+        if(largest != now){
+            swap(A[largest],A[now]);
+            now = largest;
         }
+        else break;
     }
 }
 
 void HeapSort(int A[],int L){
-    for(int i=len/2-1;i>=0;i--)MaxHeapify(A,i,len-1);
-    for(int i=len-1;i>0;i--){
-        swap(A[0],A[i]);
-        MaxHeapify(A,0,i-1);
+    for(int i=L/2;i;i--)MaxHeapify(A,i,L);
+    for(int i=L;i;i--){
+        swap(A[1],A[i]);
+        MaxHeapify(A,1,i-1);
     }
 }
