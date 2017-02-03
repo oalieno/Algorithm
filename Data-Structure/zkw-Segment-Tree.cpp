@@ -9,7 +9,7 @@ int M,A[NUM],T[NUM*4];
 
 // one-based
 void Build(int N){
-    while(M=1;M<N+2;M<<=1);
+    for(M=1;M<N+2;M<<=1);
     for(int i=1;i<=N;i++) T[M+i] = A[i];
     for(int i=M-1;i;i--) T[i] = T[i<<1]+T[i<<1|1];
 }
