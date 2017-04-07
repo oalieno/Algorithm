@@ -1,3 +1,14 @@
+// Normal Version
+int dp[NUM][NUM];
+
+int C(int N,int M){
+    if(M < N/2)M = N-M;
+    if(M == 0)return 1;
+    if(dp[N][M] == -1)dp[N][M] = C(N-1,M)+C(N-1,M-1);
+    return dp[N][M];
+}
+
+// Mod Version
 int factor[NUM], invfactor[NUM];
 
 void initialize(){
