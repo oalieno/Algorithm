@@ -1,15 +1,11 @@
 // Multiply and Mod ( and prevent overflow )
-long long MultiplyMod(long long a,long long b,long long M) {
-    if (M <= 1000000000) return a * b % M; 
+long long MultiplyMod(long long a,long long b,long long mod) {
     long long res = 0;
-    while (a > 0) {
-        if (a & 1) {
-            res += b;
-            if (res >= M) res -= M;
+    for(a %= mod,b %= mod;b != 0;a <<= 1,b >>= 1,a = a >= mod ? a - mod : a){
+        if(b & 1){
+            res += a;
+            if(res >= mod) res -= mod;
         }
-        a >>= 1;
-        b <<= 1;
-        if (b >= M) b -= M;
     }
     return res;
 }
