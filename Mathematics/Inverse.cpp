@@ -1,3 +1,3 @@
 int inverse(int x){
-    return Power(x,MOD-2);
+    return power(x,MOD-2);
 }
