@@ -1,3 +1,4 @@
+// Time Complexity : O(W+P)
 void Z(string word,string pattern){
     int Z[word.size()+pattern.size()];
     string S = pattern+word;
