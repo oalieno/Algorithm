@@ -1,5 +1,5 @@
 /*
-can   update, query range sum
+can   update, range query sum
 can't insert, delete
 */
 
