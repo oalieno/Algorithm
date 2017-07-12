@@ -1,3 +1,8 @@
+/*
+can   update, query range sum
+can't insert, delete
+*/
+
 int A[N+1]; // one-based
 
 inline int lower_bit(int x){ return x&-x; }
