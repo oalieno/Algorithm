@@ -1,6 +1,7 @@
+// one-based
+
 // Time Complexity : O(|E|log|V|)
 vector<int> Dijkstra(VPII E[],int N,int S){
-	// one-based
     vector<bool> visit(N+1,false);
     vector<int> D(N+1,INF); // D -> Distance
     priority_queue<PII,VPII,greater<PII>> P;

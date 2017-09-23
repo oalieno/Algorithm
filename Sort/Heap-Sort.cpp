@@ -1,6 +1,6 @@
-// Complexity : O(logN)
 // one-based
 
+// Complexity : O(logN)
 void MaxHeapify(int A[],int now,int L){
     while(now <= L/2){
         int left = now*2,right = now*2+1,largest = now;
@@ -14,6 +14,7 @@ void MaxHeapify(int A[],int now,int L){
     }
 }
 
+// Complexity : O(NlogN)
 void HeapSort(int A[],int L){
     for(int i=L/2;i;i--)MaxHeapify(A,i,L);
     for(int i=L;i;i--){
