@@ -9,8 +9,8 @@ int Phi(int x){
 }
 
 void BuildPhi(int phi[],int N){
-    for(int i=1;i<=N;i++) phi[i] = i;
-    for(int i=1;i<=N;i++) for(x=i*2;x<=N;x+=i) phi[x] -= phi[i];
+    for(int i = 1; i <= N; i++) phi[i] = i;
+    for(int i = 1; i <= N; i++) for(int x = i * 2; x <= N; x += i) phi[x] -= phi[i];
 }
 
 void BuildPhi(int phi[],int N){
